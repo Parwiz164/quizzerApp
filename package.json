@@ -1,0 +1,25 @@
+{
+  "name": "quizzer",
+  "version": "1.0.0",
+  "description": "a quizzer app build with express server and multiple SPA's",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "concurrently \"npm start --prefix teamApp\" \"npm start --prefix quizMasterApp\" \"npm start --prefix ScoreBoardApp\"",
+    "dev": "concurrently \" npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "concurrently": "^3.6.0",
+    "express": "^4.16.3",
+    "reactstrap": "^6.2.0",
+    "socket.io": "^2.1.1",
+    "ws": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
